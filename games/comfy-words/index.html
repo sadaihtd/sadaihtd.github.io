@@ -1,47 +1,197 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html class="light" lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <title>Comfy Words - Sadaiah Games</title>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Game Details - Sadaiah Games</title>
+    <link href="https://fonts.googleapis.com/css2?family=Spline+Sans:wght@300;400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#000000",
+                        "accent-green": "#22c55e",
+                        "background-light": "#ffffff",
+                        "surface-light": "#f9fafb",
+                    },
+                    fontFamily: {
+                        "display": ["Spline Sans", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "2xl": "1rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
     <style>
         body {
-            background: #1e1e1e;
-            color: #ddd;
-            font-family: sans-serif;
-            padding: 20px;
-            max-width: 600px;
-            margin: 0 auto;
-            line-height: 1.6;
+            font-family: 'Spline Sans', sans-serif;
+            background-color: #ffffff;
+            color: #000000;
         }
 
-        a {
-            color: #bb86fc;
+        .clean-nav {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid #f3f4f6;
         }
 
-        .btn {
-            display: inline-block;
-            background: #bb86fc;
-            color: #000;
-            padding: 10px 20px;
-            text-decoration: none;
-            border-radius: 5px;
-            margin-top: 20px;
-            font-weight: bold;
+        .clean-card {
+            background: #ffffff;
+            border: 1px solid #e5e7eb;
+            transition: all 0.3s ease;
         }
     </style>
 </head>
 
-<body>
-    <h1>Comfy Words</h1>
-    <p>Zrelaksuj się przy naszej grze słownej.</p>
+<body
+    class="bg-white overflow-x-hidden min-h-screen flex flex-col font-display selection:bg-black selection:text-white">
+    <!-- Header Container -->
+    <nav id="site-header" class="sticky top-0 z-50 clean-nav w-full"></nav>
 
-    <a href="#" class="btn">Pobierz z Google Play</a>
+    <!-- Main Game Content -->
+    <section class="py-20 relative overflow-hidden">
+        <div class="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <!-- Breadcrumbs / Back Link -->
+            <div class="mb-8">
+                <a href="../../index.html"
+                    class="inline-flex items-center gap-2 text-gray-500 hover:text-black font-medium transition-colors text-sm">
+                    <span class="material-symbols-outlined text-lg">arrow_back</span>
+                    <span data-config-text="backToGamesBtn">Back to Games</span>
+                </a>
+            </div>
 
-    <br><br>
-    <hr>
-    <p><small><a href="privacy.html">Polityka Prywatności</a> | <a href="../../index.html">Wróć do strony
-                głównej</a></small></p>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start">
+                <!-- Left: Image -->
+                <div class="w-full">
+                    <div class="clean-card rounded-2xl overflow-hidden shadow-xl aspect-video relative group">
+                        <img id="game-thumbnail" src="" alt="Game Screenshot" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-black/5 opacity-0 group-hover:opacity-100 transition-opacity">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Details -->
+                <div class="space-y-8">
+                    <div>
+                        <h1 id="game-title" class="text-4xl md:text-5xl font-bold tracking-tight text-black mb-2">
+                            Loading...</h1>
+                        <span id="game-type"
+                            class="inline-block bg-gray-100 text-gray-600 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Loading...</span>
+                    </div>
+
+                    <div id="game-description" class="text-gray-600 text-lg leading-relaxed space-y-4">
+                        <!-- Description will be injected here -->
+                    </div>
+
+                    <div id="game-features" class="space-y-4 border-t border-gray-100 pt-6 hidden">
+                        <h3 class="text-xl font-bold text-black" data-config-text="featuresTitle">Features</h3>
+                        <ul id="features-list" class="space-y-2 text-gray-600">
+                            <!-- Features injected here -->
+                        </ul>
+                    </div>
+
+                    <div class="pt-4 flex flex-col sm:flex-row gap-4">
+                        <a id="play-btn" href="#" target="_blank"
+                            class="inline-flex items-center justify-center gap-2 bg-accent-green hover:bg-[#1db053] text-white font-bold py-3 px-8 rounded-lg transition-all shadow-lg shadow-green-500/20 w-full sm:w-auto">
+                            <span class="material-symbols-outlined">android</span>
+                            <span id="play-btn-text">Download on Google Play</span>
+                        </a>
+                        <!-- Privacy Policy Link (Specific to game) -->
+                        <a id="privacy-link" href="privacy.html"
+                            class="inline-flex items-center justify-center gap-2 bg-white border border-gray-200 hover:border-black text-black font-bold py-3 px-8 rounded-lg transition-all w-full sm:w-auto">
+                            <span class="material-symbols-outlined">security</span>
+                            <span data-config-text="privacyPolicyLink">Privacy Policy</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Container -->
+    <footer id="site-footer" class="py-12 bg-white border-t border-gray-100"></footer>
+
+    <!-- Config & Logic -->
+    <script src="../../assets/js/config.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            // Load Components (Header/Footer) - Note relative paths
+            if (window.location.protocol !== 'file:') {
+                loadComponent('site-header', '../../assets/components/header.html', setupNavigation);
+                loadComponent('site-footer', '../../assets/components/footer.html');
+            }
+
+            // Load manifest relative to current folder
+            fetch('manifest.json')
+                .then(response => response.json())
+                .then(game => {
+                    const lang = ACTIVE_CONFIG.currentLang || 'en';
+
+                    // Localized Data
+                    const name = (lang === 'pl' && game.name_pl) ? game.name_pl : game.name;
+                    const type = (lang === 'pl' && game.type_pl) ? game.type_pl : game.type;
+
+                    // Handling Description (Long vs Short)
+                    let description = (lang === 'pl' && game.description_pl) ? game.description_pl : game.description;
+                    if (lang === 'pl' && game.description_long_pl) {
+                        description = game.description_long_pl;
+                    } else if (game.description_long_en) {
+                        description = game.description_long_en;
+                    } else if (game.description_long) { // Fallback to generic long
+                        description = game.description_long;
+                    }
+
+                    const buttonText = (lang === 'pl' && game.buttonText_pl) ? game.buttonText_pl : (game.buttonText || 'Play Now');
+
+                    // Update DOM
+                    document.title = `${name} - Sadaiah Games`;
+                    document.getElementById('game-title').textContent = name;
+                    document.getElementById('game-type').textContent = type;
+                    document.getElementById('game-thumbnail').src = game.thumbnail;
+                    document.getElementById('game-description').innerHTML = description; // Allow HTML in description
+
+                    // Features
+                    const features = (lang === 'pl' && game.features_pl) ? game.features_pl : game.features;
+                    if (features && features.length > 0) {
+                        const featuresContainer = document.getElementById('game-features');
+                        const featuresList = document.getElementById('features-list');
+                        featuresContainer.classList.remove('hidden');
+                        featuresList.innerHTML = features.map(f => `<li class="flex items-start gap-2"><span class="material-symbols-outlined text-accent-green text-sm pt-1">check_circle</span>${f}</li>`).join('');
+                    }
+
+                    // Button
+                    const playBtn = document.getElementById('play-btn');
+                    const playBtnText = document.getElementById('play-btn-text');
+                    playBtnText.textContent = buttonText;
+
+                    if (game.googlePlayLink && game.googlePlayLink !== '#') {
+                        playBtn.href = game.googlePlayLink;
+                    } else {
+                        playBtn.classList.add('opacity-50', 'cursor-not-allowed');
+                        playBtn.href = 'javascript:void(0)';
+                        if (game.status !== 'released') {
+                            playBtnText.textContent = (lang === 'pl' ? 'Wkrótce' : 'Coming Soon');
+                            playBtn.classList.replace('bg-accent-green', 'bg-gray-400');
+                        }
+                    }
+
+                    // Config text replacement for static elements (Back to Games, etc.)
+                    document.querySelectorAll('[data-config-text]').forEach(el => {
+                        const key = el.getAttribute('data-config-text');
+                        if (ACTIVE_CONFIG[key]) el.textContent = ACTIVE_CONFIG[key];
+                    });
+
+                })
+                .catch(err => console.error("Failed to load game manifest:", err));
+        });
+    </script>
 </body>
 
 </html>

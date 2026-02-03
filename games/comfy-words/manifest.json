@@ -7,6 +7,22 @@
     "type_pl": "Łamigłówka Słowna",
     "description": "Relax and unwind with this cozy word puzzle game. Connect letters, find words, and enjoy the calm atmosphere.",
     "description_pl": "Zrelaksuj się przy tej przytulnej grze słownej. Łącz litery, znajduj słowa i ciesz się spokojną atmosferą.",
+    "description_long_pl": "<p><strong>🧩 Dla Każdego</strong><br>Niezależnie od tego, czy masz 5 minut w autobusie, czy długi wieczór w fotelu – Comfy Words zapewni Ci spokojną rozrywkę. Proste zasady, piękna oprawa graficzna i brak stresującego licznika czasu w trybie Relaks.</p><p><strong>🌍 Dwa Języki</strong><br>Graj po polsku lub ucz się angielskiego! To świetny sposób na poszerzenie słownictwa w obcym języku bez wysiłku.</p><p><strong>🏆 Wybierz Swój Styl</strong><br><ul><li><strong>Tryb Relaks:</strong> Graj we własnym tempie. Bez kar, bez pośpiechu. Tylko Ty i słowa.</li><li><strong>Tryb Wyzwanie:</strong> Sprawdź się! Masz ograniczony czas. Jak wysoko uda Ci się wspiąć w rankingu?</li></ul></p>",
+    "features_pl": [
+        "Tysiące słów do odkrycia.",
+        "Kojąca muzyka i dźwięki ASMR.",
+        "Estetyczny, czytelny design.",
+        "Trzy poziomy trudności: Łatwy, Średni, Trudny.",
+        "Gra w pełni darmowa."
+    ],
+    "description_long_en": "<p><strong>🧩 For Everyone</strong><br>Whether you have 5 minutes on the bus or a long evening ahead – Comfy Words provides peaceful entertainment. Simple rules, beautiful graphics, and no stressful timer in Relax Mode.</p><p><strong>🌍 Two Languages</strong><br>Play in Polish or learn English! A great way to expand your vocabulary effortlessly.</p><p><strong>🏆 Choose Your Style</strong><br><ul><li><strong>Relax Mode:</strong> Play at your own pace. No penalties, no rush. Just you and the words.</li><li><strong>Challenge Mode:</strong> Test yourself! Limited time. How high can you climb the leaderboard?</li></ul></p>",
+    "features": [
+        "Thousands of words to discover.",
+        "Soothing music and ASMR sounds.",
+        "Aesthetic, clean design.",
+        "Three difficulty levels: Easy, Medium, Hard.",
+        "Completely free to play."
+    ],
     "thumbnail": "main_banner.jpg",
     "playLink": "index.html",
     "buttonText": "Play Now",

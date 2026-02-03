@@ -36,6 +36,7 @@ const SITE_CONFIG = {
             gamesLink: "Games",
             careersLink: "Careers",
             privacyPolicyLink: "Privacy Policy",
+            featuresTitle: "Features",
 
             // About Page
             aboutPageTitle: "About Sadaiah Games",
@@ -69,6 +70,7 @@ const SITE_CONFIG = {
             gamesLink: "Gry",
             careersLink: "Kariera",
             privacyPolicyLink: "Polityka Prywatności",
+            featuresTitle: "Cechy Gry",
 
             // About Page
             aboutPageTitle: "O Sadaiah Games",
@@ -137,7 +139,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const key = el.getAttribute('data-config-href');
         if (key === 'email' && ACTIVE_CONFIG.email) {
             el.href = `mailto:${ACTIVE_CONFIG.email}`;
-        } else if (ACTIVE_CONFIG[key]) {
+        } else if (ACTIVE_CONFIG[key] && key !== 'careersLink') { // Avoid overwriting careers link with text
             el.href = ACTIVE_CONFIG[key];
         }
     });
@@ -250,6 +252,22 @@ async function loadComponent(elementId, path, callback) {
         if (!response.ok) throw new Error(`Failed to load ${path}`);
         const html = await response.text();
         element.innerHTML = html;
+
+        // Auto-fix relative links if we are loading config from a subdirectory (indicated by path starting with ../../)
+        if (path.startsWith('../../')) {
+            element.querySelectorAll('a').forEach(a => {
+                const href = a.getAttribute('href');
+                if (href && !href.startsWith('http') && !href.startsWith('#') && !href.startsWith('mailto:') && !href.startsWith('javascript:')) {
+                    a.setAttribute('href', '../../' + href);
+                }
+            });
+            element.querySelectorAll('img').forEach(img => {
+                const src = img.getAttribute('src');
+                if (src && !src.startsWith('http') && !src.startsWith('data:') && !src.startsWith('../../')) { // Check if not already fixed or absolute
+                    img.setAttribute('src', '../../' + src);
+                }
+            });
+        }
 
         // Re-run config replacement on loaded content
         element.querySelectorAll('[data-config-text]').forEach(el => {
