@@ -1,2 +1,2 @@
 # sadaihtd.github.io
-sadev aih studio
+sadev studio
