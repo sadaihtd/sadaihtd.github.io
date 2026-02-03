@@ -1,0 +1,11 @@
+{
+    "id": "project-alpha",
+    "name": "Project Alpha",
+    "status": "in-development",
+    "type": "Action Adventure",
+    "description": "An upcoming action-packed adventure through uncharted territories. Stay tuned for updates!",
+    "thumbnail": "assets/images/game2.jpg",
+    "playLink": "index.html",
+    "buttonText": "Coming Soon",
+    "googlePlayLink": "#"
+}

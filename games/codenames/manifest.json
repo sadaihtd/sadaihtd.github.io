@@ -1,0 +1,11 @@
+{
+    "id": "codenames",
+    "name": "Codenames",
+    "status": "concept",
+    "type": "Strategy",
+    "description": "Early concept for a strategic puzzle game where every move counts. More details to come.",
+    "thumbnail": "assets/images/game3.jpg",
+    "playLink": "index.html",
+    "buttonText": "Concept Phase",
+    "googlePlayLink": "#"
+}

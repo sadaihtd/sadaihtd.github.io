@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Szczegóły Gry</title>
+    <link href="https://fonts.googleapis.com/css2?family=Spline+Sans:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Spline Sans', sans-serif;
+            background-color: #000;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body class="flex items-center justify-center min-h-screen p-4">
+
+    <div class="max-w-2xl w-full text-center space-y-8">
+        <div
+            class="aspect-video w-full rounded-2xl overflow-hidden shadow-2xl bg-gray-900 border border-gray-800 relative">
+            <img id="game-thumbnail" src="" alt="Game Thumbnail" class="w-full h-full object-cover opacity-80">
+            <div class="absolute inset-0 flex items-center justify-center bg-black/40">
+                <h1 id="game-title" class="text-4xl md:text-6xl font-bold text-white tracking-tight drop-shadow-lg">
+                    Loading...</h1>
+            </div>
+        </div>
+
+        <div class="space-y-4">
+            <div class="inline-block px-3 py-1 rounded-full border border-gray-700 bg-gray-900/50 text-sm text-gray-400 uppercase tracking-wider font-semibold"
+                id="game-type">Loading...</div>
+            <p id="game-description" class="text-xl text-gray-300 font-light leading-relaxed max-w-lg mx-auto">
+                Please wait while we load the game details.
+            </p>
+        </div>
+
+        <div class="flex justify-center gap-4">
+            <a href="../../index.html"
+                class="px-8 py-3 rounded-lg border border-gray-700 hover:border-white text-white font-bold transition-all">
+                Wróć do strony głównej
+            </a>
+            <a href="#" id="privacy-link"
+                class="px-8 py-3 rounded-lg bg-gray-800 hover:bg-gray-700 text-gray-400 font-bold transition-all">
+                Polityka Prywatności
+            </a>
+        </div>
+    </div>
+
+    <script>
+        // Prosty skrypt do ładowania danych z manifest.json
+        fetch('manifest.json')
+            .then(response => response.json())
+            .then(data => {
+                document.title = data.name + " - Sadaiah Games";
+                document.getElementById('game-title').textContent = data.name;
+                document.getElementById('game-type').textContent = data.type;
+                document.getElementById('game-description').textContent = data.description;
+                document.getElementById('game-thumbnail').src = '../../' + data.thumbnail;
+
+                // Opcjonalnie: polityka prywatności specyficzna dla gry
+                // Jeśli w manifescie jest zdefiniowana, użyj jej, w przeciwnym razie ukryj przycisk lub daj domyślną
+                if (data.privacyPolicy) {
+                    document.getElementById('privacy-link').href = data.privacyPolicy;
+                } else {
+                    document.getElementById('privacy-link').style.display = 'none'; // Ukryj jeśli brak
+                }
+
+                // Status gry
+                if (data.status !== 'released') {
+                    const statusBadge = document.createElement('div');
+                    statusBadge.className = "absolute top-4 right-4 bg-yellow-500/90 text-black font-bold px-3 py-1 rounded-full text-xs uppercase shadow-lg";
+                    statusBadge.textContent = data.status.replace('-', ' ');
+                    document.querySelector('.aspect-video').appendChild(statusBadge);
+                }
+            })
+            .catch(error => {
+                console.error('Error loading manifest:', error);
+                document.getElementById('game-title').textContent = "Błąd";
+                document.getElementById('game-description').textContent = "Nie udało się załadować danych gry.";
+            });
+    </script>
+</body>
+
+</html>
