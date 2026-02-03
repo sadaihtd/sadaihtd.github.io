@@ -110,6 +110,9 @@
 
                     // Simple text replacement to preserve basic structure but avoid HTML injection
                     // If user wants raw text, we use textContent. 
+                    // To support the basic markdown-like list chars user used (*), 
+                    // we can do very basic processing or just show as is. 
+                    // "simple" and "ignore beautiful formatting" suggests raw text is fine.
                     content.textContent = text;
 
                     content.classList.remove('hidden');
