@@ -1,11 +1,15 @@
 {
     "id": "codenames",
     "name": "Codenames",
+    "name_pl": "Tajniacy",
     "status": "concept",
     "type": "Strategy",
+    "type_pl": "Strategia",
     "description": "Early concept for a strategic puzzle game where every move counts. More details to come.",
-    "thumbnail": "assets/images/game3.jpg",
+    "description_pl": "Wczesny koncept strategicznej gry logicznej, gdzie każdy ruch się liczy.",
+    "thumbnail": "main_banner.jpg",
     "playLink": "index.html",
     "buttonText": "Concept Phase",
+    "buttonText_pl": "Faza Konceptu",
     "googlePlayLink": "#"
 }

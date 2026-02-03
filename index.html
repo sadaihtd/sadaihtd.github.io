@@ -62,30 +62,7 @@
 
 <body
     class="bg-white overflow-x-hidden min-h-screen flex flex-col font-display selection:bg-black selection:text-white">
-    <nav class="sticky top-0 z-50 clean-nav w-full">
-        <div class="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center justify-between h-20">
-                <div class="flex items-center gap-3">
-                    <div class="w-8 h-8 text-black flex items-center justify-center">
-                        <span class="material-symbols-outlined text-3xl">sports_esports</span>
-                    </div>
-                    <span class="text-black text-xl font-bold tracking-tight" data-config-text="shortName">Sadaiah
-                        Games</span>
-                </div>
-                <div class="hidden md:flex items-center gap-8">
-                    <a class="text-gray-600 hover:text-black transition-colors text-sm font-medium" href="#">Games</a>
-                    <a class="text-gray-600 hover:text-black transition-colors text-sm font-medium" href="#">About</a>
-                    <a class="text-gray-600 hover:text-black transition-colors text-sm font-medium" href="#">Careers</a>
-                </div>
-                <div class="flex items-center">
-                    <a href="mailto:contact@example.com" data-config-href="email"
-                        class="bg-black hover:bg-gray-800 text-white text-sm font-bold py-2.5 px-6 rounded-lg transition-all duration-300 shadow-md hover:shadow-lg">
-                        Contact Us
-                    </a>
-                </div>
-            </div>
-        </div>
-    </nav>
+    <nav id="site-header"></nav>
     <section class="relative pt-12 pb-24 md:pt-20 md:pb-32 overflow-hidden">
         <div
             class="absolute top-0 right-0 w-[600px] h-[600px] bg-gray-50 rounded-full blur-[80px] pointer-events-none -z-10 opacity-60">
@@ -170,10 +147,10 @@
                 craft worlds you can carry in your pocket.
             </p>
             <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-                <button
-                    class="min-w-[160px] h-12 rounded-lg bg-black hover:bg-gray-800 text-white text-base font-bold transition-all shadow-md">
+                <a href="about.html"
+                    class="min-w-[160px] h-12 flex items-center justify-center rounded-lg bg-black hover:bg-gray-800 text-white text-base font-bold transition-all shadow-md">
                     About Us
-                </button>
+                </a>
                 <button
                     class="min-w-[160px] h-12 rounded-lg border border-gray-300 hover:bg-white hover:border-black text-black text-base font-bold transition-all bg-transparent">
                     Join Our Team
@@ -181,40 +158,7 @@
             </div>
         </div>
     </section>
-    <footer class="py-12 bg-white">
-        <div class="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col md:flex-row justify-between items-center gap-8">
-                <div class="flex flex-col items-center md:items-start gap-4">
-                    <div class="flex items-center gap-2">
-                        <span class="material-symbols-outlined text-black text-2xl">sports_esports</span>
-                        <span class="text-black font-bold text-lg" data-config-text="shortName">Studio</span>
-                    </div>
-                    <p class="text-gray-500 text-sm" data-config-text="footerCopyright">© 2023 Studio. All rights
-                        reserved.</p>
-                </div>
-                <div class="flex items-center gap-8">
-                    <a class="text-gray-500 hover:text-black transition-colors text-sm font-medium"
-                        href="comfy-words/privacy.html">Privacy Policy</a>
-                    <a class="text-gray-500 hover:text-black transition-colors text-sm font-medium" href="#">Terms of
-                        Service</a>
-                </div>
-                <div class="flex items-center gap-4">
-                    <a class="w-10 h-10 rounded-full bg-gray-100 hover:bg-black hover:text-white flex items-center justify-center text-gray-600 transition-all group"
-                        href="#">
-                        <span class="material-symbols-outlined text-xl">public</span>
-                    </a>
-                    <a class="w-10 h-10 rounded-full bg-gray-100 hover:bg-black hover:text-white flex items-center justify-center text-gray-600 transition-all group"
-                        href="#">
-                        <span class="material-symbols-outlined text-xl">chat_bubble</span>
-                    </a>
-                    <a class="w-10 h-10 rounded-full bg-gray-100 hover:bg-black hover:text-white flex items-center justify-center text-gray-600 transition-all group"
-                        href="#">
-                        <span class="material-symbols-outlined text-xl">mail</span>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </footer>
+    <footer id="site-footer" class="py-12 bg-white"></footer>
 
     <script src="assets/js/config.js"></script>
 </body>

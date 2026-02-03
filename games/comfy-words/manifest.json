@@ -1,11 +1,15 @@
 {
     "id": "comfy-words",
     "name": "Comfy Words",
+    "name_pl": "Comfy Words",
     "status": "released",
     "type": "Word Puzzle",
+    "type_pl": "Łamigłówka Słowna",
     "description": "Relax and unwind with this cozy word puzzle game. Connect letters, find words, and enjoy the calm atmosphere.",
-    "thumbnail": "assets/images/game1.jpg",
+    "description_pl": "Zrelaksuj się przy tej przytulnej grze słownej. Łącz litery, znajduj słowa i ciesz się spokojną atmosferą.",
+    "thumbnail": "main_banner.jpg",
     "playLink": "index.html",
     "buttonText": "Play Now",
+    "buttonText_pl": "Zagraj Teraz",
     "googlePlayLink": "#"
 }

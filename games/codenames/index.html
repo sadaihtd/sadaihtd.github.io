@@ -58,7 +58,7 @@
                 document.getElementById('game-title').textContent = data.name;
                 document.getElementById('game-type').textContent = data.type;
                 document.getElementById('game-description').textContent = data.description;
-                document.getElementById('game-thumbnail').src = '../../' + data.thumbnail;
+                document.getElementById('game-thumbnail').src = data.thumbnail;
 
                 // Opcjonalnie: polityka prywatności specyficzna dla gry
                 // Jeśli w manifescie jest zdefiniowana, użyj jej, w przeciwnym razie ukryj przycisk lub daj domyślną

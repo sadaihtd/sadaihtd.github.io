@@ -1,11 +1,15 @@
 {
     "id": "project-alpha",
     "name": "Project Alpha",
+    "name_pl": "Projekt Alpha",
     "status": "in-development",
     "type": "Action Adventure",
+    "type_pl": "Przygodowa Akcja",
     "description": "An upcoming action-packed adventure through uncharted territories. Stay tuned for updates!",
-    "thumbnail": "assets/images/game2.jpg",
+    "description_pl": "Nadchodząca przygoda pełna akcji przez niezbadane terytoria. Czekajcie na aktualizacje!",
+    "thumbnail": "main_banner.jpg",
     "playLink": "index.html",
     "buttonText": "Coming Soon",
+    "buttonText_pl": "Wkrótce",
     "googlePlayLink": "#"
 }

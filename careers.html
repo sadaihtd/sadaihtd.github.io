@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Careers - Sadaiah Games</title>
+    <link href="https://fonts.googleapis.com/css2?family=Spline+Sans:wght@300;400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#000000",
+                        "accent-green": "#22c55e",
+                        "background-light": "#ffffff",
+                        "surface-light": "#f9fafb",
+                    },
+                    fontFamily: {
+                        "display": ["Spline Sans", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "2xl": "1rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Spline Sans', sans-serif;
+            background-color: #ffffff;
+            color: #000000;
+        }
+
+        .clean-nav {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid #f3f4f6;
+        }
+
+        .clean-card {
+            background: #ffffff;
+            border: 1px solid #e5e7eb;
+            transition: all 0.3s ease;
+        }
+    </style>
+</head>
+
+<body
+    class="bg-white overflow-x-hidden min-h-screen flex flex-col font-display selection:bg-black selection:text-white">
+    <nav id="site-header" class="sticky top-0 z-50 clean-nav w-full"></nav>
+
+    <section class="py-20 relative overflow-hidden">
+        <div class="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="flex flex-col md:flex-row items-center gap-12 lg:gap-20">
+                <div class="flex-1 space-y-8">
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.1] tracking-tight text-black"
+                        data-config-text="careersPageTitle">
+                        Join the Team
+                    </h1>
+                    <h2 class="text-xl md:text-2xl text-accent-green font-medium"
+                        data-config-text="careersPageSubtitle">
+                        Currently, the team is just me. But who knows?
+                    </h2>
+                    <div class="space-y-6 text-gray-600 text-lg leading-relaxed">
+                        <p data-config-text="careersPageContent1">
+                            Sadaiah Games is a solo operation. I do the coding, the art, the sound, and the coffee
+                            making. It's a lot of hats for one head, but I wouldn't have it any other way.
+                        </p>
+                        <p data-config-text="careersPageContent2">
+                            While I'm not actively hiring, I'm always open to collaborations with talented artists or
+                            musicians. If you love games and want to make something cool together, drop me a line!
+                        </p>
+                    </div>
+                    <div class="pt-4">
+                        <a href="mailto:contact@example.com" data-config-href="email"
+                            class="inline-flex items-center gap-2 bg-black hover:bg-gray-800 text-white font-bold py-3 px-8 rounded-lg transition-colors shadow-lg shadow-black/10">
+                            Looking for Co-founders?
+                        </a>
+                    </div>
+                </div>
+                <div class="flex-1 w-full">
+                    <div
+                        class="relative w-full aspect-square md:aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl border border-gray-100 bg-gray-50 flex items-center justify-center">
+                        <!-- Placeholder for a "Working Hard" image or similar -->
+                        <span class="material-symbols-outlined text-9xl text-gray-200">engineering</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-24 border-t border-gray-100 pt-16">
+                <h3 class="text-3xl font-bold text-black mb-8 text-center" data-config-text="openPositionsTitle">Open
+                    Positions</h3>
+                <div class="bg-gray-50 rounded-2xl p-12 text-center border border-gray-100">
+                    <p class="text-gray-500 text-lg" data-config-text="noPositionsText">No open positions at the moment.
+                        Check back later!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="site-footer" class="py-12 bg-white border-t border-gray-100"></footer>
+
+    <script src="assets/js/config.js"></script>
+    <script>
+        // Additional logic to support src replacement from config
+        document.addEventListener("DOMContentLoaded", () => {
+            document.querySelectorAll('[data-config-src]').forEach(el => {
+                const key = el.getAttribute('data-config-src');
+                if (SITE_CONFIG[key] || (ACTIVE_CONFIG && ACTIVE_CONFIG[key])) {
+                    el.src = SITE_CONFIG[key] || ACTIVE_CONFIG[key];
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

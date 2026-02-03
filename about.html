@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>About Us - Sadaiah Games</title>
+    <link href="https://fonts.googleapis.com/css2?family=Spline+Sans:wght@300;400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#000000",
+                        "accent-green": "#22c55e",
+                        "background-light": "#ffffff",
+                        "surface-light": "#f9fafb",
+                    },
+                    fontFamily: {
+                        "display": ["Spline Sans", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "2xl": "1rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Spline Sans', sans-serif;
+            background-color: #ffffff;
+            color: #000000;
+        }
+
+        .clean-nav {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid #f3f4f6;
+        }
+
+        .clean-card {
+            background: #ffffff;
+            border: 1px solid #e5e7eb;
+            transition: all 0.3s ease;
+        }
+    </style>
+</head>
+
+<body
+    class="bg-white overflow-x-hidden min-h-screen flex flex-col font-display selection:bg-black selection:text-white">
+    <nav id="site-header" class="sticky top-0 z-50 clean-nav w-full"></nav>
+
+    <section class="py-20 relative overflow-hidden">
+        <div class="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="flex flex-col md:flex-row items-center gap-12 lg:gap-20">
+                <div class="flex-1 space-y-8">
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.1] tracking-tight text-black"
+                        data-config-text="aboutPageTitle">
+                        About Sadaiah Games
+                    </h1>
+                    <h2 class="text-xl md:text-2xl text-accent-green font-medium" data-config-text="aboutPageSubtitle">
+                        Passion for pixels, code, and storytelling.
+                    </h2>
+                    <div class="space-y-6 text-gray-600 text-lg leading-relaxed">
+                        <p data-config-text="aboutPageContent1">
+                            Sadaiah Games is a one-person independent game studio dedicated to crafting meaningful
+                            mobile experiences. Founded in 2026, the mission is simple: create games that respect your
+                            time and intelligence.
+                        </p>
+                        <p data-config-text="aboutPageContent2">
+                            Every project is a labor of love, built from scratch with a focus on clean design, smooth
+                            gameplay, and no predatory monetization. When you play a Sadaiah game, you're playing
+                            something made by a gamer, for gamers.
+                        </p>
+                    </div>
+                    <div class="pt-4">
+                        <a href="index.html"
+                            class="inline-flex items-center gap-2 text-black hover:text-gray-600 font-bold transition-colors">
+                            <span class="material-symbols-outlined">arrow_back</span>
+                            Back to Games
+                        </a>
+                    </div>
+                </div>
+                <div class="flex-1 w-full">
+                    <div
+                        class="relative w-full aspect-square md:aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl border border-gray-100">
+                        <img src="assets/images/hero_bg.jpg" alt="About Us Image" class="w-full h-full object-cover"
+                            data-config-src="aboutPageImage">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="site-footer" class="py-12 bg-white border-t border-gray-100"></footer>
+
+    <script src="assets/js/config.js"></script>
+    <script>
+        // Additional logic to support src replacement from config
+        document.addEventListener("DOMContentLoaded", () => {
+            document.querySelectorAll('[data-config-src]').forEach(el => {
+                const key = el.getAttribute('data-config-src');
+                if (SITE_CONFIG[key]) {
+                    el.src = SITE_CONFIG[key];
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
