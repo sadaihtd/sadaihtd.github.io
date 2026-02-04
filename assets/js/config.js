@@ -14,7 +14,10 @@ const SITE_CONFIG = {
             "comfy-words",
             "project-alpha",
             "codenames"
-        ]
+        ],
+        aboutPageImage: "assets/images/about_us.png",
+        careersPageImage: "assets/images/careers_photo.png",
+        heroImage: "assets/images/hero_bg2.png"
     },
 
     // Language Specific Data
