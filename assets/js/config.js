@@ -6,10 +6,10 @@
 const SITE_CONFIG = {
     // Common Data (same for all languages)
     common: {
-        developerName: "Sadaiah Games",
-        shortName: "Sadaiah",
+        developerName: "Sad Dev Studio",
+        shortName: "Saddev",
         email: "contact@example.com",
-        footerCopyright: "© 2026 Sadaiah Games. All rights reserved.",
+        footerCopyright: "© 2026 Sad Dev Studio. All rights reserved.",
         games: [
             "comfy-words",
             "project-alpha",
@@ -89,7 +89,9 @@ const SITE_CONFIG = {
         }
     },
 
-    aboutPageImage: "assets/images/hero_bg.jpg"
+    aboutPageImage: "assets/images/about_us.png",
+    careersPageImage: "assets/images/careers_photo.png",
+    heroImage: "assets/images/hero_bg2.png"
 };
 
 // =============================================================================
@@ -180,14 +182,27 @@ document.addEventListener("DOMContentLoaded", () => {
     if (gamesContainer && ACTIVE_CONFIG.games) {
         gamesContainer.innerHTML = ''; // Clear existing static content if any
 
-        ACTIVE_CONFIG.games.forEach(gameId => {
+        // Use Promise.all to fetch all manifests in parallel but process them in order
+        const gamePromises = ACTIVE_CONFIG.games.map(gameId =>
             fetch(`games/${gameId}/manifest.json`)
-                .then(response => response.json())
-                .then(game => {
-                    const card = createGameCard(game, gameId, ACTIVE_CONFIG.currentLang);
-                    gamesContainer.appendChild(card);
+                .then(response => {
+                    if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+                    return response.json();
                 })
-                .catch(err => console.error(`Failed to load manifest for ${gameId}:`, err));
+                .then(game => ({ game, gameId }))
+                .catch(err => {
+                    console.error(`Failed to load manifest for ${gameId}:`, err);
+                    return null;
+                })
+        );
+
+        Promise.all(gamePromises).then(results => {
+            results.forEach(result => {
+                if (result) {
+                    const card = createGameCard(result.game, result.gameId, ACTIVE_CONFIG.currentLang);
+                    gamesContainer.appendChild(card);
+                }
+            });
         });
     }
 });
