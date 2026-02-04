@@ -1,6 +1,6 @@
 
 // =============================================================================
-// SITE CONFIGURATION
+// SITE CONFIGURATION || poprawka config
 // =============================================================================
 
 const SITE_CONFIG = {
@@ -42,16 +42,16 @@ const SITE_CONFIG = {
             featuresTitle: "Features",
 
             // About Page
-            aboutPageTitle: "About Sadaiah Games",
+            aboutPageTitle: "About Sad Dev Studio",
             aboutPageSubtitle: "Passion for pixels, code, and storytelling.",
-            aboutPageContent1: "Sadaiah Games is a one-person independent game studio dedicated to crafting meaningful mobile experiences. Founded in 2026, the mission is simple: create games that respect your time and intelligence.",
+            aboutPageContent1: "Sad Dev Studio is a one-person independent game studio dedicated to crafting meaningful mobile experiences. Founded in 2026, the mission is simple: create games that respect your time and intelligence.",
             aboutPageContent2: "Every project is a labor of love, built from scratch with a focus on clean design, smooth gameplay, and no predatory monetization. When you play a Sadaiah game, you're playing something made by a gamer, for gamers.",
             backToGamesBtn: "Back to Games",
 
             // Careers Page
             careersPageTitle: "Join the Team",
             careersPageSubtitle: "Currently, the team is just me. But who knows?",
-            careersPageContent1: "Sadaiah Games is a solo operation. I do the coding, the art, the sound, and the coffee making. It's a lot of hats for one head, but I wouldn't have it any other way.",
+            careersPageContent1: "Sad Dev Studio is a solo operation. I do the coding, the art, the sound, and the coffee making. It's a lot of hats for one head, but I wouldn't have it any other way.",
             careersPageContent2: "While I'm not actively hiring, I'm always open to collaborations with talented artists or musicians. If you love games and want to make something cool together, drop me a line!",
             openPositionsTitle: "Open Positions",
             noPositionsText: "No open positions at the moment. Check back later!",
@@ -76,16 +76,16 @@ const SITE_CONFIG = {
             featuresTitle: "Cechy Gry",
 
             // About Page
-            aboutPageTitle: "O Sadaiah Games",
+            aboutPageTitle: "O Sad Dev Studio",
             aboutPageSubtitle: "Pasja do pikseli, kodu i opowieści.",
-            aboutPageContent1: "Sadaiah Games to jednoosobowe studio gier niezależnych, dedykowane tworzeniu wartościowych doświadczeń mobilnych. Założone w 2026 roku, z prostą misją: tworzyć gry, które szanują Twój czas i inteligencję.",
+            aboutPageContent1: "Sad Dev Studio to jednoosobowe studio gier niezależnych, dedykowane tworzeniu wartościowych doświadczeń mobilnych. Założone w 2026 roku, z prostą misją: tworzyć gry, które szanują Twój czas i inteligencję.",
             aboutPageContent2: "Każdy projekt to praca z miłości, budowana od podstaw z naciskiem na czysty design, płynną rozgrywkę i brak drapieżnej monetyzacji. Grając w grę Sadaiah, grasz w coś stworzonego przez gracza, dla graczy.",
             backToGamesBtn: "Powrót do Gier",
 
             // Careers Page
             careersPageTitle: "Dołącz do Zespołu",
             careersPageSubtitle: "Aktualnie zespół to tylko ja. Ale kto wie?",
-            careersPageContent1: "Sadaiah Games to operacja jednoosobowa. Robię kod, grafikę, dźwięk i parzę kawę. To dużo czapek na jedną głowę, ale nie chciałbym inaczej.",
+            careersPageContent1: "Sad Dev Studio to operacja jednoosobowa. Robię kod, grafikę, dźwięk i parzę kawę. To dużo czapek na jedną głowę, ale nie chciałbym inaczej.",
             careersPageContent2: "Mimo że aktywnie nie zatrudniam, zawsze jestem otwarty na współpracę z utalentowanymi artystami czy muzykami. Jeśli kochasz gry i chcesz stworzyć razem coś fajnego, napisz do mnie!",
             openPositionsTitle: "Otwarte Stanowiska",
             noPositionsText: "Brak otwartych stanowisk w tej chwili. Sprawdź później!",
