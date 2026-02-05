@@ -9,7 +9,6 @@ const SITE_CONFIG = {
         developerName: "Sad Dev Studio",
         shortName: "Saddev",
         email: "contact@example.com",
-        footerCopyright: "© 2026 Sad Dev Studio. All rights reserved.",
         games: [
             "comfy-words",
             "project-alpha",
@@ -27,6 +26,14 @@ const SITE_CONFIG = {
             heroSubtitle: "Simple, fun, and engaging Android games crafted with passion.",
             exploreGamesBtn: "Explore Games",
             watchReelBtn: "Watch Reel",
+            contactUsBtn: "Contact Us",
+            coFoundersBtn: "Looking for Co-founders?",
+            newReleaseLabel: "New Release",
+            pageTitleHome: "Sad Dev Studio - Home",
+            pageTitleAbout: "About Us - Sad Dev Studio",
+            pageTitleCareers: "Careers - Sad Dev Studio",
+            pageTitlePrivacy: "Privacy Policy - Sad Dev Studio",
+            footerCopyright: "© 2026 Sad Dev Studio. All rights reserved.",
 
             ourCreationsTitle: "Our Creations",
             ourCreationsSubtitle: "Experience our latest title(s) available now on Android.",
@@ -45,7 +52,7 @@ const SITE_CONFIG = {
             aboutPageTitle: "About Sad Dev Studio",
             aboutPageSubtitle: "Passion for pixels, code, and storytelling.",
             aboutPageContent1: "Sad Dev Studio is a one-person independent game studio dedicated to crafting meaningful mobile experiences. Founded in 2026, the mission is simple: create games that respect your time and intelligence.",
-            aboutPageContent2: "Every project is a labor of love, built from scratch with a focus on clean design, smooth gameplay, and no predatory monetization. When you play a Sadaiah game, you're playing something made by a gamer, for gamers.",
+            aboutPageContent2: "Every project is a labor of love, built from scratch with a focus on clean design, smooth gameplay, and no predatory monetization. When you play a Sad Dev Studio game, you're playing something made by a gamer, for gamers.",
             backToGamesBtn: "Back to Games",
 
             // Careers Page
@@ -61,6 +68,14 @@ const SITE_CONFIG = {
             heroSubtitle: "Proste, zabawne i wciągające gry na Androida, tworzone z pasją.",
             exploreGamesBtn: "Poznaj Gry",
             watchReelBtn: "Zobacz Wideo",
+            contactUsBtn: "Kontakt",
+            coFoundersBtn: "Szukasz Współzałożycieli?",
+            newReleaseLabel: "Nowość",
+            pageTitleHome: "Sad Dev Studio - Strona Główna",
+            pageTitleAbout: "O Nas - Sad Dev Studio",
+            pageTitleCareers: "Kariera - Sad Dev Studio",
+            pageTitlePrivacy: "Polityka Prywatności - Sad Dev Studio",
+            footerCopyright: "© 2026 Sad Dev Studio. Wszelkie prawa zastrzeżone.",
 
             ourCreationsTitle: "Nasze Gry",
             ourCreationsSubtitle: "Sprawdź nasze najnowsze tytuły dostępne na Androida.",
@@ -79,7 +94,7 @@ const SITE_CONFIG = {
             aboutPageTitle: "O Sad Dev Studio",
             aboutPageSubtitle: "Pasja do pikseli, kodu i opowieści.",
             aboutPageContent1: "Sad Dev Studio to jednoosobowe studio gier niezależnych, dedykowane tworzeniu wartościowych doświadczeń mobilnych. Założone w 2026 roku, z prostą misją: tworzyć gry, które szanują Twój czas i inteligencję.",
-            aboutPageContent2: "Każdy projekt to praca z miłości, budowana od podstaw z naciskiem na czysty design, płynną rozgrywkę i brak drapieżnej monetyzacji. Grając w grę Sadaiah, grasz w coś stworzonego przez gracza, dla graczy.",
+            aboutPageContent2: "Każdy projekt to praca z miłości, budowana od podstaw z naciskiem na czysty design, płynną rozgrywkę i brak drapieżnej monetyzacji. Grając w grę Sad Dev Studio, grasz w coś stworzonego przez gracza, dla graczy.",
             backToGamesBtn: "Powrót do Gier",
 
             // Careers Page

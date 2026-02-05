@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>Sadaiah Games - Official Page</title>
+    <title data-config-text="pageTitleHome">Sad Dev Studio - Home</title>
     <link href="https://fonts.googleapis.com/css2?family=Spline+Sans:wght@300;400;500;600;700&amp;display=swap"
         rel="stylesheet" />
 
@@ -81,14 +81,14 @@
                         </p>
                     </div>
                     <div class="flex gap-4">
-                        <button
+                        <button data-config-text="exploreGamesBtn"
                             class="bg-black text-white hover:bg-gray-800 text-base font-bold py-3 px-8 rounded-lg transition-colors shadow-lg shadow-black/10">
                             Explore Games
                         </button>
                         <button
                             class="flex items-center gap-2 text-black hover:text-gray-600 px-6 py-3 font-medium transition-colors border border-gray-200 hover:border-black rounded-lg bg-white">
                             <span class="material-symbols-outlined text-[20px]">play_circle</span>
-                            <span>Watch Reel</span>
+                            <span data-config-text="watchReelBtn">Watch Reel</span>
                         </button>
                     </div>
                 </div>
@@ -99,7 +99,7 @@
                             class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
                         <div class="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/80 to-transparent">
                             <div class="flex items-center gap-3">
-                                <div
+                                <div data-config-text="newReleaseLabel"
                                     class="px-2 py-1 bg-white/20 backdrop-blur-md rounded text-xs text-white border border-white/30 font-bold uppercase tracking-wide">
                                     New Release
                                 </div>
@@ -116,11 +116,13 @@
             <div
                 class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12 border-b border-gray-100 pb-8">
                 <div>
-                    <h2 class="text-3xl md:text-4xl font-bold text-black mb-3">Our Creations</h2>
-                    <p class="text-gray-500 max-w-md">Experience our latest titles available now on Android.</p>
+                    <h2 class="text-3xl md:text-4xl font-bold text-black mb-3" data-config-text="ourCreationsTitle">Our
+                        Creations</h2>
+                    <p class="text-gray-500 max-w-md" data-config-text="ourCreationsSubtitle">Experience our latest
+                        titles available now on Android.</p>
                 </div>
                 <a class="text-black hover:text-gray-600 transition-colors text-sm font-bold flex items-center gap-1 group"
-                    href="#">
+                    href="#" data-config-text="viewAllGamesBtn">
                     View All Games
                     <span
                         class="material-symbols-outlined text-lg group-hover:translate-x-1 transition-transform">arrow_forward</span>
@@ -145,7 +147,7 @@
                 craft worlds you can carry in your pocket.
             </p>
             <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-                <a href="about.html"
+                <a href="about.html" data-config-text="aboutUsBtn"
                     class="min-w-[160px] h-12 flex items-center justify-center rounded-lg bg-black hover:bg-gray-800 text-white text-base font-bold transition-all shadow-md">
                     About Us
                 </a>
