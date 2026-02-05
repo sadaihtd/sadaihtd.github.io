@@ -6,6 +6,8 @@
             </div>
             <span class="text-black text-xl font-bold tracking-tight" data-config-text="shortName">Sadaiah Games</span>
         </a>
+
+        <!-- Desktop Navigation -->
         <div class="hidden md:flex items-center gap-8">
             <a class="nav-link text-gray-600 hover:text-black transition-colors text-sm font-medium" href="index.html"
                 data-config-text="gamesLink">Games</a>
@@ -23,6 +25,33 @@
                     Contact Us
                 </a>
             </div>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <div class="flex md:hidden items-center gap-4">
+            <button id="mobile-menu-btn" class="p-2 text-black hover:bg-gray-100 rounded-lg transition-colors">
+                <span class="material-symbols-outlined text-2xl" id="menu-icon">menu</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- Mobile Navigation Menu -->
+    <div id="mobile-menu" class="hidden md:hidden border-t border-gray-100 py-4 space-y-2 pb-6">
+        <a class="block px-4 py-2 text-base font-medium text-gray-600 hover:text-black hover:bg-gray-50 rounded-lg transition-colors nav-link"
+            href="index.html" data-config-text="gamesLink">Games</a>
+        <a class="block px-4 py-2 text-base font-medium text-gray-600 hover:text-black hover:bg-gray-50 rounded-lg transition-colors nav-link"
+            href="about.html" data-config-text="aboutUsBtn">About</a>
+        <a class="block px-4 py-2 text-base font-medium text-gray-600 hover:text-black hover:bg-gray-50 rounded-lg transition-colors nav-link"
+            href="careers.html" data-config-text="careersLink">Careers</a>
+        <div class="px-4 pt-4 border-t border-gray-100 flex flex-col gap-4">
+            <button id="lang-toggle-mobile"
+                class="w-full text-center text-sm font-bold py-2 rounded border border-gray-300 hover:bg-black hover:text-white transition-colors">
+                PL / EN
+            </button>
+            <a href="mailto:contact@example.com" data-config-href="email"
+                class="w-full text-center bg-black text-white text-sm font-bold py-3 px-6 rounded-lg shadow-md">
+                Contact Us
+            </a>
         </div>
     </div>
 </div>

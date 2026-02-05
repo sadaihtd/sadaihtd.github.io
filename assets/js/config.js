@@ -295,13 +295,45 @@ async function loadComponent(elementId, path, callback) {
         });
 
         // Language Toggle Logic (if present)
-        const langBtn = element.querySelector('#lang-toggle');
-        if (langBtn) {
-            const currentLang = getLanguage();
-            langBtn.textContent = currentLang === 'pl' ? 'EN' : 'PL'; // Show option to switch TO
-            langBtn.onclick = () => {
-                setLanguage(currentLang === 'pl' ? 'en' : 'pl');
+        const setupLangButton = (btnId) => {
+            const btn = element.querySelector(btnId);
+            if (btn) {
+                const currentLang = getLanguage();
+                btn.textContent = currentLang === 'pl' ? 'EN' : 'PL';
+                btn.onclick = (e) => {
+                    e.preventDefault();
+                    setLanguage(currentLang === 'pl' ? 'en' : 'pl');
+                };
+            }
+        };
+
+        setupLangButton('#lang-toggle');
+        setupLangButton('#lang-toggle-mobile');
+
+        // Mobile Menu Logic
+        const mobileMenuBtn = element.querySelector('#mobile-menu-btn');
+        const mobileMenu = element.querySelector('#mobile-menu');
+        const menuIcon = element.querySelector('#menu-icon');
+
+        if (mobileMenuBtn && mobileMenu && menuIcon) {
+            mobileMenuBtn.onclick = () => {
+                const isHidden = mobileMenu.classList.contains('hidden');
+                if (isHidden) {
+                    mobileMenu.classList.remove('hidden');
+                    menuIcon.textContent = 'close';
+                } else {
+                    mobileMenu.classList.add('hidden');
+                    menuIcon.textContent = 'menu';
+                }
             };
+
+            // Close menu on link click
+            mobileMenu.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                    menuIcon.textContent = 'menu';
+                });
+            });
         }
 
         if (callback) callback();
