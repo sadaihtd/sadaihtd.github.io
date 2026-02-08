@@ -8,7 +8,7 @@ const SITE_CONFIG = {
     common: {
         developerName: "Sad Dev Studio",
         shortName: "Saddev",
-        email: "contact@example.com",
+        email: "sadaih@gmail.com",
         games: [
             "comfy-words",
             "project-alpha",
