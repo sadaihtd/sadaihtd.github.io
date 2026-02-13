@@ -8,15 +8,18 @@ const SITE_CONFIG = {
     common: {
         developerName: "Sad Dev Studio",
         shortName: "Saddev",
-        email: "sadaih@gmail.com",
+        email: "saddevstudio@gmail.com",
+        youtube: "https://www.youtube.com/@SadDevStudio",
+        x: "https://x.com/sadaih123",
+        tiktok: "https://www.tiktok.com/@saddevstudio",
         games: [
             "comfy-words",
             "project-alpha",
             "codenames"
         ],
-        aboutPageImage: "assets/images/about_us.png",
-        careersPageImage: "assets/images/careers_photo.png",
-        heroImage: "assets/images/hero_bg2.png"
+        aboutPageImage: "assets/images/about_us.jpg",
+        careersPageImage: "assets/images/careers_photo.jpg",
+        heroImage: "assets/images/hero_bg2.jpg"
     },
 
     // Language Specific Data
@@ -156,6 +159,12 @@ document.addEventListener("DOMContentLoaded", () => {
         const key = el.getAttribute('data-config-href');
         if (key === 'email' && ACTIVE_CONFIG.email) {
             el.href = `mailto:${ACTIVE_CONFIG.email}`;
+        } else if (key === 'youtube' && ACTIVE_CONFIG.youtube) {
+            el.href = ACTIVE_CONFIG.youtube;
+        } else if (key === 'x' && ACTIVE_CONFIG.x) {
+            el.href = ACTIVE_CONFIG.x;
+        } else if (key === 'tiktok' && ACTIVE_CONFIG.tiktok) {
+            el.href = ACTIVE_CONFIG.tiktok;
         } else if (ACTIVE_CONFIG[key] && key !== 'careersLink') { // Avoid overwriting careers link with text
             el.href = ACTIVE_CONFIG[key];
         }
@@ -306,7 +315,15 @@ async function loadComponent(elementId, path, callback) {
         });
         element.querySelectorAll('[data-config-href]').forEach(el => {
             const key = el.getAttribute('data-config-href');
-            if (key === 'email' && ACTIVE_CONFIG.email) el.href = `mailto:${ACTIVE_CONFIG.email}`;
+            if (key === 'email' && ACTIVE_CONFIG.email) {
+                el.href = `mailto:${ACTIVE_CONFIG.email}`;
+            } else if (key === 'youtube' && ACTIVE_CONFIG.youtube) {
+                el.href = ACTIVE_CONFIG.youtube;
+            } else if (key === 'x' && ACTIVE_CONFIG.x) {
+                el.href = ACTIVE_CONFIG.x;
+            } else if (key === 'tiktok' && ACTIVE_CONFIG.tiktok) {
+                el.href = ACTIVE_CONFIG.tiktok;
+            }
         });
 
         // Language Toggle Logic (if present)
