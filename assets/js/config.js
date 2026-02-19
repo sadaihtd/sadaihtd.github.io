@@ -14,7 +14,7 @@ const SITE_CONFIG = {
         tiktok: "https://www.tiktok.com/@saddevstudio",
         games: [
             "comfy-words",
-            "project-alpha",
+            "dotit",
             "codenames"
         ],
         aboutPageImage: "assets/images/about_us.jpg",

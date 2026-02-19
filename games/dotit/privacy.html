@@ -117,9 +117,13 @@
                     document.getElementById('loading').classList.add('hidden');
                     const content = document.getElementById('privacy-content');
 
-                    // Simple text replacement to preserve basic structure but avoid HTML injection
-                    // If user wants raw text, we use textContent. 
-                    content.textContent = text;
+                    // Zamiana linków http... na klikalne tagi <a>, a reszta jako czysty tekst zachowujący nowe linie poprzez CSS 'white-space: pre-wrap'
+                    const textWithLinks = text.replace(
+                        /(https?:\/\/[^\s]+)/g,
+                        '<a href="$1" target="_blank" class="text-accent-green hover:underline">$1</a>'
+                    );
+
+                    content.innerHTML = textWithLinks;
 
                     content.classList.remove('hidden');
                 })

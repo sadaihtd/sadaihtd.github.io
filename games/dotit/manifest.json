@@ -1,0 +1,28 @@
+{
+    "id": "dotit",
+    "name": "dotIT",
+    "name_pl": "dotIT",
+    "status": "released",
+    "type": "Arcade Puzzle",
+    "type_pl": "Zręcznościowa Łamigłówka",
+    "description": "Connect beautiful glossy dots to score points. A relaxing and challenging logic game with vibrant neon aesthetics and a 3-dot minimum connection rule.",
+    "description_pl": "Pikselowa perfekcja. Łącz piękne lśniące kropki, aby zdobywać punkty. Relaksująca i wymagająca gra logiczna z soczystymi animacjami i wibracjami (wymaga połączenia min. 3 kropek!).",
+    "description_long_pl": "<p><strong>🧩 Relaksująca Rozgrywka</strong><br>Łącz co najmniej 3 kropki tego samego koloru, aby punktować. Ciesz się miodnym uczuciem pękających elementów z subtelną fizyką trzęsienia się i sprężystymi obramowaniami.</p><p><strong>💎 Odświeżona, piękna Oprawa</strong><br>Poznaj nową wizję gry logicznej z lśniącymi jak szklane koraliki elementami, wibrującymHUD i satysfakcjonującą paletą barw na jasnym żółtym tle.</p><p><strong>🏆 Rywalizacja z Reklamami dla Wsparcia</strong><br>Baw się dobrze, sprawdzaj podpowiedzi i pokonuj swoje tablice wyników grając całkowicie za darmo.</p>",
+    "features_pl": [
+        "Innowacyjna mechanika łączenia wymagająca 3 kropek.",
+        "Satysfakcjonujące, szkliste shadery przypominające żetony.",
+        "Czysty design i pływające teksty przy zachwycających combosach.",
+        "Całkowicie za darmo (z reklamami wspierającymi niezależnego twórcę)."
+    ],
+    "description_long_en": "<p><strong>🧩 Relaxing Gameplay</strong><br>Connect at least 3 dots of the same color to score points. Enjoy the juicy feeling of popping elements with subtle shaking physics and springy selection outlines.</p><p><strong>💎 Beautiful New Visuals</strong><br>Experience a new vision of a puzzle game with elements shining like glass beads, vibrating HUD, and a satisfying color palette on a bright yellow background.</p><p><strong>🏆 Compete with Ad Support</strong><br>Have fun, check hints, and beat your leaderboards playing completely for free.</p>",
+    "features": [
+        "Innovative connecting mechanics requiring 3 dots minimum.",
+        "Satisfying, glossy shaders resembling chips.",
+        "Clean design and floating texts with delightful combos.",
+        "Completely free to play (with ads supporting independent dev)."
+    ],
+    "thumbnail": "main_banner.jpg",
+    "playLink": "index.html",
+    "buttonText": "Play Now",
+    "buttonText_pl": "Zagraj Teraz"
+}
